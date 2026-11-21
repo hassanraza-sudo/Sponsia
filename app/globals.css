@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 96%;
+    --foreground: 200 8% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 200 8% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 8% 15%;
+    --primary: 160 53% 19%;
+    --primary-foreground: 40 33% 96%;
+    --secondary: 140 22% 88%;
+    --secondary-foreground: 160 53% 15%;
+    --muted: 140 17% 92%;
+    --muted-foreground: 200 6% 38%;
+    --accent: 140 25% 90%;
+    --accent-foreground: 160 53% 15%;
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 0 0% 98%;
+    --gold: 38 44% 60%;
+    --gold-foreground: 160 53% 12%;
+    --border: 140 12% 86%;
+    --input: 140 12% 86%;
+    --ring: 160 53% 19%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer utilities {
+  .container-tight {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s ease-out both;
+}
+
+.animate-fade-up-delay-1 { animation: fade-up 0.7s 0.1s ease-out both; }
+.animate-fade-up-delay-2 { animation: fade-up 0.7s 0.2s ease-out both; }
+.animate-fade-up-delay-3 { animation: fade-up 0.7s 0.3s ease-out both; }
