@@ -1,4 +1,4 @@
-# Taleem Dost (تعلیم دوست)
+# Sponsia
 
 **Every Student Deserves a Chance.**
 
